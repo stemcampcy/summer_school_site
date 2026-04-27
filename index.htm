@@ -61,11 +61,12 @@
     nav{
       flex:0 0 auto;
       white-space:nowrap;
+      display:flex;
+      gap:18px;
     }
     nav a{
       color:var(--navy);
       text-decoration:none;
-      margin-left:18px;
       font-size:.95rem;
     }
     nav a:hover{text-decoration:underline}
@@ -257,6 +258,39 @@
       font-size:.95rem;
     }
 
+	@media (max-width: 768px) {
+      .site-header .container{
+        flex-wrap:wrap;
+        padding:10px 0;
+      }
+      .brand img{
+        height:70px;
+      }
+      nav{
+        white-space:normal;
+        gap:12px;
+        order:3;
+        width:100%;
+        margin-top:8px;
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+      nav a{
+        font-size:.85rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .brand img{
+        height:60px;
+      }
+      nav a{
+        font-size:.8rem;
+        margin:0 8px;
+      }
+    }
+
+	  
     @media (max-width: 900px){
       .grid-2,.grid-3,.grid-4,.logo-strip,.facts{
         grid-template-columns:1fr;
